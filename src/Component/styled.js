@@ -1,5 +1,5 @@
 import React from "react";
-import Spare from "../Assets/Projects/spare.png";
+import Spare from "../Assets/Projects/SPare.png";
 import Sg from "../Assets/Projects/Sg.png";
 import x from "../Assets/Projects/spcex.png";
 import dashboard from "../Assets/Projects/dashboaard.png";

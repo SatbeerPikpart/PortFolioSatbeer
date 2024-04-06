@@ -31,15 +31,15 @@ const GradientOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  // background: linear-gradient(
+  //   to top,
+  //   rgba(0, 0, 0, 0.7) 0%,
+  //   rgba(0, 0, 0, 0) 100%
+  // );
 `;
 
 const Img = styled.img`
-  width: 100%;
+  width: 50%;
   border-radius: 18px;
   cursor: pointer;
 `;
@@ -63,7 +63,7 @@ const LinkBox = styled.div`
 `;
 
 const WorkDiv = styled.div`
-  width: 45%;
+  width: 30%;
   @media (max-width: 550px) {
     width: 80%;
   }
@@ -178,9 +178,19 @@ const Work = React.forwardRef(({ onClick }, ref) => {
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              <GradientOverlay />
-              <Img src={i?.img} />
-              {hoveredIndex === index && (
+              {/* <GradientOverlay /> */}
+              <div
+                style={{
+                  background: "#fff",
+                  display: "flex",
+                  justifyContent: "center",
+                  borderRadius: "12px",
+                  boxShadow: "rgba(0,0,0,0.1) 4px 4px 4px",
+                }}
+              >
+                <Img src={i?.img} />
+              </div>
+              {/* {hoveredIndex === index && (
                 <LinkBox show={true}>
                   <div style={{ fontSize: "1.1rem" }}>{i?.description}</div>
                   <a
@@ -191,7 +201,7 @@ const Work = React.forwardRef(({ onClick }, ref) => {
                     <FaExternalLinkAlt />
                   </a>
                 </LinkBox>
-              )}
+              )} */}
             </WorkDiv>
           );
         })}
